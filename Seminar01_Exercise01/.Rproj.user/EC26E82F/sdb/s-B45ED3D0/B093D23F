@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1389579174293.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B093D23F",
+    "lastKnownWriteTime" : 140591459467265,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "prDat",
+        "contentUrl" : "content?title=prDat&file=60965342453145c0b19258d4c7674390.htm",
+        "displayedObservations" : 39,
+        "displayedVariables" : 7,
+        "totalObservations" : 39,
+        "variables" : 6
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
