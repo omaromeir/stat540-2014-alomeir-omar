@@ -13,6 +13,7 @@ prepareData  <- function(g){
     pDat1 <- data.frame(prDes, gExp = as.vector(as.matrix(prDat[g[i], ])), gene = g[i])
     pDat <- rbind(pDat, pDat1)
   } 
+  str(pDat)
   pDat
 }
 
@@ -22,10 +23,9 @@ str(jDat)
 head(jDat)
 tail(jDat)
 
-stripplot(gExp ~ devStage | gene, jDat, group = gType, jitter.data = TRUE, auto.key = TRUE, type = c('p', 'a'), grid = TRUE)
-
-#the data
+#d: the data
 makeStripplot  <- function(d){
   stripplot(gExp ~ devStage | gene, d, group = gType, jitter.data = TRUE, auto.key = TRUE, type = c('p', 'a'), grid = TRUE)
 }
 
+makeStripplot(jDat)
