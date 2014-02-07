@@ -74,6 +74,11 @@ oFitSmall <- lm(formula = gExp ~ gType + devStage, data=oDat)
 
 anova(oFitSmall, oFitBig)
 
+#Is the intercept plausible? How about the various effects? Do the ones with small p-values, e.g. meeting a conventional cut-off of 0.05, look 'real' to you?
+#Intercept seems reasonable, the effects with p values smaller than 0.05 are clear in the plot.
+
+#Looking at a more interesting gene
+
 makeStripplot(iDat <- prepareData("1429225_at"))
 
 iFitBig <- lm(formula = gExp ~ gType * devStage, data=iDat)
@@ -81,3 +86,16 @@ iFitBig <- lm(formula = gExp ~ gType * devStage, data=iDat)
 iFitSmall <- lm(formula = gExp ~ gType + devStage, data=iDat)
 
 anova(iFitSmall, iFitBig)
+
+#Further experimentation
+
+#adding age as a quantitative variable
+library(car)
+
+mDat$age <- recode(mDat$devStage, "'E16'=-2; 'P2'=2; ' P6'=6; 'P10'=10; '4_weeks'=28", as.factor.result = FALSE)
+
+# xyplot(gExp ~ age, mDat, type=c("p", "smooth"))
+
+#Quadratic model
+# qFit = lm(formula=gExp~age + I(age^2), data=mDat)
+# summary(qFit)
