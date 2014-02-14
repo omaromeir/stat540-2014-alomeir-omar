@@ -127,3 +127,5 @@ summary(wtResCont)
 
 greatestHits <- rownames(prDat)[which(wtResCont[, "P2VsI"] < 0 & wtResCont[, "P6VsP2"] > 0 & wtResCont[, "P10VsP6"] == 0 & wtResCont[, "fourweeksVsP10"] == 0)]
 stripplot(gExp ~ devStage | gene, subset= gType=="wt", asp=1, prepareData(greatestHits), jitter.data = TRUE, auto.key = TRUE, type = c('p', 'a'), grid = TRUE)
+
+#Found 8 possible hits!
