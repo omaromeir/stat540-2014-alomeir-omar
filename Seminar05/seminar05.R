@@ -6,7 +6,7 @@ prDes  <- readRDS("../data/GSE4051_design.rds")
 str(prDes)
 
 #g: the selected genes
-prepareData  <- function(g){
+prepareData  <- function(g, d = prDes){
   #prDes row + gExp of the gene from prDat + gene from the input
   pDat <- data.frame()
   for (i in 1:length(g)){
